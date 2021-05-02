@@ -8,9 +8,14 @@ let results = document.querySelector('div')
 
 let handle = async event => {
   event.preventDefault()
-  
   results.textContent = 'searching...'
-  let params = `?q=${query.value}+language:${language.value}&sort=${sortBy.value}&order=${orderBy.value}&per_page=${perPage.value}&page=${page.value}`
+
+  let {value} = query
+
+  if (!value) return results.textContent = 'missing search query.'
+  if (language.value) value += `+language:${language.value}`
+
+  let params = `?q=${value}&sort=${sortBy.value}&order=${orderBy.value}&per_page=${perPage.value}&page=${page.value}`
   let res = await fetch(endpoint + params)
   
   if (res.status != 200) return results.textContent = 'something went wrong.'
