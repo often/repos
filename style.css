@@ -21,7 +21,7 @@ body {
   color: var(--color);
   background: var(--bg);
   padding: 10px 30px;
-  max-width: 1200px;
+  max-width: 800px;
   margin: auto;
   overflow-wrap: break-word;
 }
@@ -98,6 +98,14 @@ div div {
   margin: 20px 0;
 }
 
+div div:nth-child(2n), div div:nth-child(2n) a {
+  color: var(--bg);
+}
+
+div div:nth-child(2n) {
+  background: var(--color);
+}
+
 div div a {
   display: block;
   margin: 10px 0;
@@ -108,6 +116,11 @@ span {
 	background: var(--color);
 	padding: 3px 5px;
 	margin: 0 0 0 10px;
+}
+
+div div:nth-child(2n) span {
+  color: var(--color);
+  background: var(--bg);
 }
 
 h1, label, div div a {
