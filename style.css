@@ -30,8 +30,6 @@ h1 {
   color: var(--bg);
   background: var(--color);
   padding: 8px;
-  width: fit-content;
-  width: -moz-fit-content;
 }
 
 h1, p {
@@ -102,8 +100,6 @@ div div {
 
 div div a {
   display: block;
-  width: fit-content;
-  width: -moz-fit-content;
   margin: 10px 0;
 }
 
@@ -112,6 +108,11 @@ span {
 	background: var(--color);
 	padding: 3px 5px;
 	margin: 0 0 0 10px;
+}
+
+h1, label, div div a {
+  width: fit-content;
+  width: -moz-fit-content;
 }
 
 ::selection {
