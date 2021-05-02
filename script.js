@@ -5,6 +5,16 @@ let selects = document.querySelectorAll('select')
 let [query, language, perPage, page] = inputs
 let [sortBy, orderBy] = selects
 let results = document.querySelector('div')
+let search = new URLSearchParams(location.search)
+
+for (let [key, value] of search) {
+  if (key == 'query') query.value = value
+  if (key == 'language') language.value = value
+  if (key == 'sortBy') sortBy.value = value
+  if (key == 'orderBy') orderBy.value = value
+  if (key == 'perPage') perPage.value = value
+  if (key == 'page') page.value = value
+}
 
 let handle = async event => {
   event.preventDefault()
@@ -47,6 +57,8 @@ let handle = async event => {
     div.append(p)
     results.append(div)
   }
+
+  history.pushState(null, null, `?query=${query.value}&language=${language.value}&sortBy=${sortBy.value}&orderBy=${orderBy.value}&perPage=${perPage.value}&page=${page.value}`)
 }
 
 form.addEventListener('submit', handle)
