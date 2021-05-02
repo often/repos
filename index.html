@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="minimalist github repo search." />
+    <meta name="theme-color" content="#222" />
+    <meta name="viewport" content="width=device-width" />
+    <title>repos</title>
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <h1>repos</h1>
+    <p>minimalist github repo search.</p>
+    <noscript>
+      <p><strong>* please enable javascript.</strong></p>
+    </noscript>
+    <form>
+      <label>query: <input autofocus /></label>
+      <label>language: <input /></label>
+      <label>
+        sort by:
+        <select>
+          <option>best match</option>
+          <option>stars</option>
+          <option>forks</option>
+          <option>help-wanted-issues</option>
+          <option>updated</option>
+        </select>
+      </label>
+      <label>
+        order by:
+        <select>
+          <option>desc</option>
+          <option>asc</option>
+        </select>
+      </label>
+      <label>per page: <input type="number" value="10" min="1" max="100" /></label>
+      <label>page: <input type="number" value="1" min="1" max="1000" /></label>
+      <button>search</button>
+    </form>
+    <div></div>
+    <p><a href="https://github.com/often/repos" target="_blank" rel="noopener">source code</a> &mdash; <a href="LICENSE" target="_blank" rel="noopener">0BSD</a></p>
+  </body>
+</html>
