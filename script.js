@@ -9,35 +9,12 @@ let search = new URLSearchParams(location.search)
 let button = document.querySelector('button')
 
 for (let [key, value] of search) {
-  if (key == 'query') {
-  	query.value = value
-  	continue
-  }
-
-  if (key == 'language') {
-  	language.value = value
-  	continue
-  }
-
-  if (key == 'sortBy') {
-  	sortBy.value = value
-  	continue
-  }
-
-  if (key == 'orderBy') {
-  	orderBy.value = value
-  	continue
-  }
-
-  if (key == 'perPage') {
-  	perPage.value = value
-  	continue
-  }
-
-  if (key == 'page') {
-  	page.value = value
-  	continue
-  }
+  if (key == 'query') query.value = value
+  else if (key == 'language') language.value = value
+  else if (key == 'sortBy') sortBy.value = value
+  else if (key == 'orderBy') orderBy.value = value
+  else if (key == 'perPage') perPage.value = value
+  else if (key == 'page') page.value = value
 }
 
 let handle = async event => {
