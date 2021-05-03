@@ -6,6 +6,7 @@ let [query, language, perPage, page] = inputs
 let [sortBy, orderBy] = selects
 let results = document.querySelector('div')
 let search = new URLSearchParams(location.search)
+let button = document.querySelector('button')
 
 for (let [key, value] of search) {
   if (key == 'query') query.value = value
@@ -62,3 +63,4 @@ let handle = async event => {
 }
 
 form.addEventListener('submit', handle)
+if (query.value) button.click()
