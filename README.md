@@ -1,7 +1,7 @@
 # repos
 minimalist github repo search.
 
-[website](https://repos.sany.one)
+[website](https://often.github.io/repos/)
 
 # license
 [0BSD](LICENSE)
